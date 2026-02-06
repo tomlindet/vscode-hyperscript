@@ -1,14 +1,14 @@
 {
     "name": "vscode-hyperscript-org",
     "displayName": "_hyperscript",
-    "publisher": "dz4k",
+    "publisher": "tomlindet",
     "description": "language support for _hyperscript <https://hyperscript.org>",
     "icon": "logo.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dz4k/vscode-hyperscript.git"
+        "url": "https://github.com/tomlindet/vscode-hyperscript.git"
     },
-    "version": "0.1.5",
+    "version": "0.1.6",
     "engines": {
         "vscode": "^1.59.0"
     },
@@ -70,6 +70,17 @@
                 },
                 "scopeName": "markdown._hyperscript.codeblock",
                 "path": "./syntaxes/markdown-injection.tmLanguage.json"
+            },
+            {
+                "injectTo": [
+                    "source.tsx",
+                    "source.jsx"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.block._hyperscript": "_hyperscript"
+                },
+                "scopeName": "source.hyperscript-tsx.injection",
+                "path": "./syntaxes/tsx-injection.tmLanguage.json"
             }
         ],
         "snippets": [
@@ -79,13 +90,12 @@
             }
         ]
     },
-    "scripts": {
-        "build": "node build/build.js",
-        "vscode:prepublish": "npm run build"
-    },
     "devDependencies": {
         "js-yaml": "^4.1.0",
         "plist2": "^1.1.2"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "hono": "^4.11.8"
+    }
 }
