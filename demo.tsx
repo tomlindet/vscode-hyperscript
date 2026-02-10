@@ -22,6 +22,7 @@ const ContratTab: FC = ({ data, existing }) => {
               remove .bg-success from #contrat-badge
             end
       </script>`}
+      <button _="on click log('clicked')" hx-get="/hello" class="btn btn-primary"></button>
     </>
   )
 }

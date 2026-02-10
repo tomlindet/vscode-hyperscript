@@ -79,8 +79,19 @@
                 "embeddedLanguages": {
                     "meta.embedded.block._hyperscript": "_hyperscript"
                 },
-                "scopeName": "source.hyperscript-tsx.injection",
-                "path": "./syntaxes/tsx-injection.tmLanguage.json"
+                "scopeName": "source.hyperscript-script-tsx.injection",
+                "path": "./syntaxes/tsx-script-injection.tmLanguage.json"
+            },
+            {
+                "injectTo": [
+                    "source.tsx",
+                    "source.jsx"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.line._hyperscript": "_hyperscript"
+                },
+                "scopeName": "source.hyperscript-attr-tsx.injection",
+                "path": "./syntaxes/tsx-attr-injection.tmLanguage.json"
             }
         ],
         "snippets": [
